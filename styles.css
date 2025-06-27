@@ -1,0 +1,109 @@
+/* MANIFEST: Globale Stil- und Layout-Prinzipien */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* MANIFEST: "Rahmen" der Inhalte (konsistente max-width: 960px) */
+.header-content,
+.content-container,
+.footer-content {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+/* MANIFEST: Header Layout und Design */
+.main-header {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E0E0E0;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* MANIFEST: Titel im Standard-Farbschema */
+.site-title {
+    color: #0088cc;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Allgemeine Inhaltsstile */
+.content-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.text-section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+.text-section:last-child { 
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* MANIFEST: Überschriften im Standard-Farbschema */
+h2 {
+    color: #0088cc;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(0, 136, 204, 0.3);
+    font-size: 2em;
+}
+
+p { margin-bottom: 1rem; }
+.content-highlight { font-style: italic; color: #555555; }
+a { color: #0088cc; text-decoration: none; }
+a:hover { color: #00aaff; text-decoration: underline; }
+
+/* Footer */
+.main-footer {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    font-size: 0.9em;
+}
+.main-footer a { color: #63b3ed; }
+.main-footer a:hover { color: #90cdf4; }
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .site-title { font-size: 1.8em; }
+    h2 { font-size: 1.6em; }
+}
